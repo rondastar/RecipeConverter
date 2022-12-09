@@ -1,0 +1,8 @@
+C:\Users\ronda\Documents\Projects\Recipe_Converter\RecipeConverter\RecipeConverter\obj\Debug\RecipeConverter.csproj.AssemblyReference.cache
+C:\Users\ronda\Documents\Projects\Recipe_Converter\RecipeConverter\RecipeConverter\obj\Debug\RecipeConverter.csproj.SuggestedBindingRedirects.cache
+C:\Users\ronda\Documents\Projects\Recipe_Converter\RecipeConverter\RecipeConverter\obj\Debug\RecipeConverter.csproj.CoreCompileInputs.cache
+C:\Users\ronda\Documents\Projects\Recipe_Converter\RecipeConverter\RecipeConverter\bin\Debug\RecipeConverter.exe.config
+C:\Users\ronda\Documents\Projects\Recipe_Converter\RecipeConverter\RecipeConverter\bin\Debug\RecipeConverter.exe
+C:\Users\ronda\Documents\Projects\Recipe_Converter\RecipeConverter\RecipeConverter\bin\Debug\RecipeConverter.pdb
+C:\Users\ronda\Documents\Projects\Recipe_Converter\RecipeConverter\RecipeConverter\obj\Debug\RecipeConverter.exe
+C:\Users\ronda\Documents\Projects\Recipe_Converter\RecipeConverter\RecipeConverter\obj\Debug\RecipeConverter.pdb
