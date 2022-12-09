@@ -81,7 +81,7 @@ namespace RecipeConverter
         }; //sourcesUStoMetric[]
         static void Main(string[] args)
         {
-            BakingPanAreaRecipe();
+            Menu();
         }
         public static void Menu()
         {
@@ -91,29 +91,38 @@ namespace RecipeConverter
                 Console.WriteLine("MENU");
                 Console.WriteLine("1 - Temp: Celsius to Fahrenheit");
                 Console.WriteLine("2 - Temp: Fahrenheit to Celsius");
-                Console.WriteLine("3 - Ingredients: Convert US units to grams");
-                Console.WriteLine("4 - Recipe: Scale by pan size");
-                Console.WriteLine("5 - Recipe: Scale by servings");
+                // The additional options are ideas for future functions
+                //Console.WriteLine("3 - Ingredients: Convert US units to grams");
+                //Console.WriteLine("4 - Recipe: Scale by pan size");
+                //Console.WriteLine("5 - Recipe: Scale by servings");
                 Console.WriteLine("e - Exit");
                 Console.Write("Enter selection: ");
                 string userInput = Console.ReadLine();
                 switch (userInput)
                 {
                     case "1":
-                        // 1 - Temp: Celsius to Fahrenheit ***********
+                        // 1 - Temp: Celsius to Fahrenheit
+                        // Prompts user for temperature to convert; returns converted temp in Fahrenheit
+                        Console.WriteLine("Convert Temperature: Celsius to Fahrenheit");
+                        double tempF = CelsiusToFahrenheitConversion(TemperatureToConvert());
+                        Console.WriteLine($"{tempF} degrees F");
                         break;
                     case "2":
-                        // 2 - Temp: Fahrenheit to Celsius ***************
+                        // 2 - Temp: Fahrenheit to Celsius
+                        // Prompts user for temperature to convert; returns converted temp in Celsius
+                        Console.WriteLine("Convert Temperature: Fahrenheit to Celsius");
+                        double tempC = FahrenheitToCelsius(TemperatureToConvert());
+                        Console.WriteLine($"{tempC} degrees C");
                         break;
-                    case "3":
-                        // 3 - Ingredients: Convert US units to grams
-                        break;
-                    case "4":
-                        // 4 - Recipe: Scale by pan size
-                        break;
-                    case "5":
-                        // 5 - Recipe: Scale by servings
-                        break;
+                    //case "3":
+                    //    // 3 - Ingredients: Convert US units to grams
+                    //    break;
+                    //case "4":
+                    //    // 4 - Recipe: Scale by pan size
+                    //    break;
+                    //case "5":
+                    //    // 5 - Recipe: Scale by servings
+                    //    break;
                     case "e":
                         // exit menu - turn off loop
                         Console.WriteLine("Good bye");
@@ -125,20 +134,33 @@ namespace RecipeConverter
                 }
             }
         }
-        public static void CToF()
+        public static double TemperatureToConvert()
         {
-
+            // Prompts user to enter a temperature to convert
+            Console.WriteLine("Enter temperature to convert: ");
+            double temp = -1;
+            bool parseUserTemp = double.TryParse(Console.ReadLine(), out double userTemp);
+            if (parseUserTemp == true)
+            {
+                temp = userTemp;
+            }
+            else
+            {
+                // User input was not a float. Displays request to re-enter temperature.
+                Console.WriteLine("Invalid entry. Please re-enter the temperature.");
+            }
+            return temp;
         }
-        public static float CelsiusToFahrenheit(float celsius)
+        public static double CelsiusToFahrenheitConversion(double celsius)
         {
             // converts degrees celsius to fahrenheit, returns degrees fahrenheit
-            float fahrenheit = celsius * (float)1.8 + 32;
+            double fahrenheit = celsius * (double)1.8 + 32;
             return fahrenheit; 
         }
-        public static float FahrenheitToCelsius(float fahrenheit)
+        public static double FahrenheitToCelsius(double fahrenheit)
         {
             // converts degrees fahrenheit to celsius, returns degrees celsius
-            float celsius = (fahrenheit - 32) / (float)1.8;
+            double celsius = (fahrenheit - 32) / 1.8;
             return celsius;
         }
         public static float BakingPanAreaRecipe()
